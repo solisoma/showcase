@@ -3,3 +3,24 @@
 {"event": "config_validated", "logger": "__main__", "level": "info", "timestamp": "2025-12-10T16:44:23.294090Z"}
 HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
 HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+{"event": "app_starting", "logger": "__main__", "level": "info", "timestamp": "2025-12-10T16:48:53.839286Z"}
+{"event": "config_validated", "logger": "__main__", "level": "info", "timestamp": "2025-12-10T16:48:53.839286Z"}
+{"event": "ui_launching (share=False)", "logger": "src.ui", "level": "info", "timestamp": "2025-12-10T16:48:54.530504Z"}
+HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
+HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-launched-telemetry "HTTP/1.1 200 OK"
+{"event": "ui_message_received: hi", "logger": "src.ui", "level": "info", "timestamp": "2025-12-10T16:49:35.098778Z"}
+{"url": "https://vipfapwm3x.us-east-1.awsapprunner.com/mcp", "event": "mcp_connection_init", "logger": "src.mcp_client", "level": "info", "timestamp": "2025-12-10T16:49:35.099351Z"}
+HTTP Request: POST https://vipfapwm3x.us-east-1.awsapprunner.com/mcp "HTTP/1.1 200 OK"
+Negotiated protocol version: 2025-06-18
+{"model": "gpt-4o-mini", "name": "TechStore Support Agent", "event": "agent_created", "logger": "src.agent", "level": "info", "timestamp": "2025-12-10T16:49:36.168485Z"}
+{"user_message": "hi", "event": "agent_run_start", "logger": "src.agent", "level": "info", "timestamp": "2025-12-10T16:49:36.169039Z"}
+HTTP Request: POST https://vipfapwm3x.us-east-1.awsapprunner.com/mcp "HTTP/1.1 202 Accepted"
+HTTP Request: POST https://vipfapwm3x.us-east-1.awsapprunner.com/mcp "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/traces/ingest "HTTP/1.1 204 No Content"
+HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+{"response_length": 34, "event": "agent_run_success", "logger": "src.agent", "level": "info", "timestamp": "2025-12-10T16:49:45.174596Z"}
+{"event": "ui_response_sent: 34 chars", "logger": "src.ui", "level": "info", "timestamp": "2025-12-10T16:49:45.183911Z"}
+HTTP Request: POST https://api.openai.com/v1/traces/ingest "HTTP/1.1 204 No Content"
