@@ -8,29 +8,28 @@ from src.prompts import WELCOME_MESSAGE
 
 logger = get_logger(__name__)
 
+# Custom CSS
+custom_css = """
+.gradio-container {
+    max-width: 800px !important;
+    margin: auto !important;
+}
+.chat-header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+"""
 
 def create_chat_interface(chat_handler):
     """
     Create the Gradio chat interface.
     """
 
-    # Custom CSS
-    custom_css = """
-    .gradio-container {
-        max-width: 800px !important;
-        margin: auto !important;
-    }
-    .chat-header {
-        text-align: center;
-        padding: 20px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-    """
-
-    with gr.Blocks(css=custom_css, title=APP_TITLE) as demo:
+    with gr.Blocks(title=APP_TITLE) as demo:
 
         # Header
         gr.HTML(f"""
@@ -44,8 +43,7 @@ def create_chat_interface(chat_handler):
         chatbot = gr.Chatbot(
             value=[{"role": "assistant", "content": WELCOME_MESSAGE}],
             height=500,
-            show_label=False,
-            type="messages",
+            show_label=False
         )
 
         # Input row
@@ -125,5 +123,5 @@ def launch_ui(demo, share=False):
     logger.info(f"ui_launching (share={share})")
 
     demo.queue()   # ✅ REQUIRED for async
-    demo.launch(share=share)
+    demo.launch(css=custom_css, share=share)
 

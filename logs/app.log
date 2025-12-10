@@ -1,0 +1,5 @@
+{"event": "app_starting", "logger": "__main__", "level": "info", "timestamp": "2025-12-10T16:43:47.924395Z"}
+{"event": "app_starting", "logger": "__main__", "level": "info", "timestamp": "2025-12-10T16:44:23.291739Z"}
+{"event": "config_validated", "logger": "__main__", "level": "info", "timestamp": "2025-12-10T16:44:23.294090Z"}
+HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
+HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
