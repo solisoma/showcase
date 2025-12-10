@@ -31,7 +31,7 @@ def create_agent(mcp_server):
     return agent
 
 
-async def run_agent(agent, user_message: str, context: list = None):
+async def run_agent(agent, user_message: str, session:any):
     """
     Run the agent with a user message.
     
@@ -49,7 +49,7 @@ async def run_agent(agent, user_message: str, context: list = None):
     
     try:
         # Run the agent
-        result = await Runner.run(agent, user_message)
+        result = await Runner.run(agent, user_message, session=session)
         
         response = result.final_output
         logger.info("agent_run_success", response_length=len(response))
