@@ -1,0 +1,7 @@
+openai-agents
+python-dotenv
+gradio
+structlog
+pytest
+pytest-asyncio
+
